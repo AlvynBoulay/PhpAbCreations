@@ -1,0 +1,225 @@
+
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.contact-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.contact-box h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.contact-box label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-box input[type="text"],
+.contact-box input[type="email"],
+.contact-box input[type="tel"],
+.contact-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.contact-box textarea {
+    height: 150px;
+}
+
+.contact-rgpd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    appearance: none;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="checkbox"]:hover {
+    border-color: #0074cc;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #0074cc;
+    border-color: #0074cc;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+.contact-button {
+    background-color: var(--color-darkbrown);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 999px;
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.contact-button:hover {
+    background-color: var(--color-red);
+}
+
+.contact-via {
+    margin-top: 2rem;
+    padding: 1rem;
+    margin: 0px 10px 30px 10px;
+    background-color: rgba(139, 0, 0, 0.9); /* Rouge foncé */
+    border-radius: 12px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.contact-via h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.btnicon {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btnicon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease, background-color 0.3s;
+    text-decoration: none;
+}
+
+.btnicon a:hover {
+    background-color: #8b0000;
+    transform: scale(1.1);
+}
+
+/* VERSION DESKTOP */
+@media (min-width: 768px) {
+    .contact-container {
+        padding: 40px; 
+    }
+
+    .contact-box {
+        max-width: 700px; 
+        padding: 40px; 
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); 
+        border-radius: 20px; 
+    }
+
+    /* TITRE */
+    .contact-box h1 {
+        font-size: 2rem; 
+        margin-bottom: 2rem;
+        color: #444; 
+    }
+
+    /* INPUTS ET TEXTAREA */
+    .contact-box input[type="text"],
+    .contact-box input[type="email"],
+    .contact-box input[type="tel"],
+    .contact-box textarea {
+        padding: 15px; 
+        font-size: 1.1rem; 
+        margin-top: 12px;
+    }
+
+    /* RGPD */
+    .contact-rgpd {
+        font-size: 1rem; 
+    }
+
+    /* BOUTON DE SOUMISSION */
+    .contact-button {
+        padding: 15px 25px; 
+        font-size: 1.1rem; 
+        margin-top: 2rem; 
+    }
+
+    /* CONTACT VIA RÉSEAUX */
+    .contact-via {
+        margin-top: 3rem;
+        padding: 1.5rem;
+        background-color: rgba(139, 0, 0, 0.9); 
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-via h2 {
+        font-size: 2rem; /* Titre plus grand */
+        padding: 1rem;
+    }
+
+    .btnicon a {
+        width: 60px; /* Boutons plus larges */
+        height: 60px; /* Boutons plus grands */
+        font-size: 1.5rem; /* Plus de taille pour les icônes */
+    }
+
+    .btnicon a:hover {
+        transform: scale(1.2); /* Agrandir au survol */
+    }
+}

@@ -1,0 +1,48 @@
+
+/* couleurs */
+$color-1: #d84040; 
+$color-2: #1D1616; 
+$color-3: #EEEEEE;
+$color-4: #8E1616;
+
+:root {
+  --color-primary: red;
+  --color-1: #1d1616;
+  --color-2: #ffffff;
+  --color-3: #d84040;
+  --color-4: #eeeeee;
+}
+
+:root {
+  --color-red:          #d84040;
+  --color-darkbrown:    #8E1616;
+  --color-lightgrey:    #eee;
+  --color-darkgrey:     #1D1616;
+}
+
+$color-red:             #{var(--color-red)};
+$color-darkbrown:       #{var(--color-darkbrown)};
+$color-lightgrey:       #{var(--color-lightgrey)};
+$color-darkgrey:       #{var(--color-darkgrey)};
+
+:root {
+  --color-background-header: var(--color-1);
+}
+
+/* Typographie */
+:root {
+  --font-family: "Lora", sans-serif;
+  --font-weight: normal;
+  --font-size: 16px;
+  --text-transform: uppercase;
+  --color: #ffffff;
+  --margin: 0 20px;
+  --text-decoration: none;
+}
+
+// === VARIABLES Page à-propos ===
+$red: #b12b2b;
+$white: #ffffff;
+$bg-gradient: linear-gradient(135deg, #f2d6cd, #c24444);
+$green: #36d46a;
+$card-bg: rgba(177, 43, 43, 0.9);

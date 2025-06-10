@@ -1,0 +1,31 @@
+// Config  
+@import "settings/config.variables";
+@import "settings/config.breakpoints";
+@import "settings/config.z-indexes";
+
+// Document elements
+@import 'elements/reset';
+@import 'elements/document';
+
+// Components
+@import "components/layer";
+@import "components/footer";
+@import "components/navigation";
+@import "components/galerie";
+
+
+// Layout
+@import "layout/header";
+
+// Forms & buttons
+@import "forms/buttons";
+
+// Pages specifics
+@import "page/home";
+@import "page/profil";
+@import "page/a-propos";
+@import "page/connexion";
+@import "page/creationdecompte";
+@import "page/pagecontact";
+@import "page/detailscreations";
+@import "page/portfolio";

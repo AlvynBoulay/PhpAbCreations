@@ -1,0 +1,209 @@
+/* Quand le menu est ouvert (sur mobile) */
+body.has-menu-opened .main-nav {
+  display: block;
+}
+
+/* NAV principale mobile */
+.main-nav {
+  position: absolute;
+  z-index: var(--z-index-main-nav);
+  background: #000000;
+  height: 100vh; 
+  top: 0;
+  left: 20%;
+  right: 0%; 
+  display: none; 
+}
+
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+/* Liste des liens */
+.main-nav ul li a {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  border-radius: 6px;
+}
+.main-nav ul li a:not(.btn) {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  color: rgb(255, 255, 255);
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.main-nav ul li {
+  margin-bottom: 30px;
+}
+
+
+/* Couleur des liens sur les écrans de taille moyenne et plus */
+@media screen and (min-width: 768px) {
+  .main-nav ul li a {
+    // margin-left: 70px; 
+
+    &:not(.btn) {
+      color: rgb(255, 255, 255);
+    }
+    
+  }
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.selected {
+  background: $color-red;
+  color: #fff;
+  transform: translateY(-2px); 
+}
+
+/* Footer du menu principal avec des icônes/liens (ex. réseaux sociaux) */
+.main-nav_footer ul {
+  display: flex;
+  gap: 0.5rem;
+  padding: 5px;
+  margin: 5px;
+}
+
+
+.main-nav_footer li {
+  flex: 1;
+}
+
+/* Ajustements pour les écrans ≥ 768px (tablette et plus) */
+@media (min-width: 768px) {
+  .openMainNav {
+    display: none; 
+  }
+
+  .main-nav {
+    position: static;
+    height: auto;
+    background: none;
+    display: block; 
+  }
+
+  .main-nav__wrapper {
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+
+  .main-nav ul {
+    display: flex; 
+  }
+
+  .openMainNav {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  body .closeMainNav {
+    display: none !important;
+  }
+}
+
+
+/*  bouton d'ouverture visible sur mobile */
+.openMainNav {
+  visibility: visible;
+}
+
+.openMainNav {
+  display: block;
+}
+
+.openMainNav {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  background-color: var(--color-2);
+  border-radius: 50%;
+  color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* Cacher le bouton sur les écrans plus larges */
+@media (min-width: 768px) {
+  .openMainNav {
+    visibility: hidden;
+  }
+}
+
+.main-nav ul {
+  padding-top: 50px;
+}
+
+
+.main-nav ul li {
+  a {
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 25px;
+      bottom: 10px;
+      height: 2px;
+      width: 0;
+      background-color: red;
+      transition: width 0.3s ease;
+    }
+
+    &:hover,
+    &.selected {
+      color: red;
+      background: none;
+
+      &::after {
+        width: calc(100% - 50px); 
+      }
+    }
+  }
+}
+
+
+/* Bouton fermer */
+.closeMainNav {
+  position: absolute;
+  top: 2%;
+  left: 80%;
+  z-index: 9999;
+  background-color: var(--color-1);
+  padding: 10px;
+  border-radius: 50%;
+  color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 767px) {
+  .main-nav ul li {
+    margin-top: 20px; /* ou la valeur souhaitée */
+  }
+
+  .main-nav__wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .main-nav_footer {
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,69 @@
+.footer {
+  background: #000;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer section div {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.footer {
+  a,
+  .footerLink {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+.footer a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.btnicon {
+  display: flex;
+  gap: 1rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer-inner {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+.btnreturn {
+  visibility: visible;
+}
+
+
+@media (min-width: 768px) {
+  .btnreturn {
+    visibility: hidden; 
+  }
+}

@@ -1,0 +1,116 @@
+
+/* Style général de bouton */
+.btn {
+  padding: 0.2rem 0.6rem; 
+  background-color: $color-lightgrey;
+  color: $color-red;
+  border: 2px solid $color-red;
+  border-radius: 12px; 
+  font-size: 8px; 
+  font-weight: 500; 
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  min-width: 100px; 
+
+  &:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  &:active {
+    transform: translateY(1px); 
+  }
+  
+}
+
+
+.btn-login,
+.btn-signup {
+  color: #fff;
+
+
+  @include media-min('tablet-up') {
+    font-size: 14px; 
+    min-width: 150px;  
+  }
+  
+  @include media-max('tablet-up') {
+    font-size: 15px; 
+  }
+}
+
+/* Bouton Login */
+.btn-login {
+  background-color: $color-red;
+  border: 2px solid $color-darkbrown;
+  
+  &:hover {
+    background-color: $color-darkgrey;
+    color: $color-red;
+  }
+}
+
+
+.btn-signup {
+  background-color: $color-lightgrey;
+  border: 2px solid $color-red;
+  color: $color-red; 
+  text 
+
+  &:hover {
+    background-color: $color-lightgrey;
+    color: $color-red;  
+  }
+}
+
+
+/* boutons page d'accueil */
+.btn-RLN {
+  background-color: $color-red;
+  color: $color-lightgrey;
+  border: 2px solid $color-lightgrey;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 15px auto 10px auto;
+  width: fit-content;       
+  max-width: 80%;           
+  padding-left: 20px;       
+  padding-right: 20px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.btn-RLN.btn2 {
+  margin-top: 10%;
+}
+
+
+// Bouton retour en haut 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  background-color: var(--color-3);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none; 
+  z-index: 1000;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--color-darkbrown);
+}

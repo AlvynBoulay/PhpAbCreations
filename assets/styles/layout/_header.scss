@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-background-header);
+  height: 100px;
+  justify-content: space-between;
+}
+
+.header .logo {
+  display: flex;
+  height: 100px;
+  margin: 30px 10px;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+
+.header .openMainNav {
+  display: flex;
+  margin-right: 20px;
+  background-color: var(--color-2);
+}
+
+#header .menu ul {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+}
+
+#header .menu li {
+  align-items: center;
+  height: 100%;
+}
+
+#header .menu a {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 20px;
+  text-decoration: none;
+}
