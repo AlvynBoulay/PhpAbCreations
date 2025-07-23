@@ -33,7 +33,7 @@ require_once("config/settings.php");
         </div>
 
         <section class="creations-list">
-            <!-- Les cartes seront injectées ici -->
+            <!-- cartes injectées ici -->
         </section>
 
         <nav class="pagination">

@@ -13,7 +13,7 @@ export default [
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
-        ...globals.browser, // ✅ Ajout ici
+        ...globals.browser, 
       },
     },
     rules: {

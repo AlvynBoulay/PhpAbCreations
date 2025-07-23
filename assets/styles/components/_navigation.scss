@@ -207,3 +207,11 @@ body.has-menu-opened .main-nav {
     margin-top: auto;
   }
 }
+
+#menu.mobile-menu {
+  display: none; /* cache ce menu injecté */
+}
+
+body.has-menu-opened #menu.mobile-menu {
+  display: block; /* l'affiche quand le menu est ouvert */
+}

@@ -11,7 +11,6 @@
                     <ul>
                     <li>
                         <a href="index.php" class="selected" title="Accueil">
-                        
                             Accueil
                         
                         </a>
@@ -54,4 +53,5 @@
             </div>
         </nav>
         <button class="openMainNav">☰</button>
+        <nav id="menu" class="mobile-menu"></nav>
     </header>

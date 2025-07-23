@@ -1,7 +1,7 @@
-let slideIndex = 1;
+/* let slideIndex = 1;
 showSlides(slideIndex);
 
-// Contrôles des boutons "Suivant" et "Précédent"
+/* // Contrôles des boutons "Suivant" et "Précédent"
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -10,7 +10,7 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
+ 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("image-slide");  // Anciennement mySlides
@@ -40,3 +40,4 @@ function showSlides(n) {
   // Mettre à jour la légende de l'image
   captionText.innerHTML = thumbnails[slideIndex-1].alt;
 }
+ */

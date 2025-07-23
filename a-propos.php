@@ -1,8 +1,39 @@
 <?php 
+require_once("config/settings.php");
 
-require_once("config/settings.php"); 
+// Connexion à la base de données (exemple PDO)
+try {
+    $pdo = new PDO('mysql:host=localhost;dbname=abcreations', 'root', '');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (Exception $e) {
+    die('Erreur DB : '.$e->getMessage());
+}
 
+// Traitement du formulaire newsletter
+if (isset($_POST['newsletter'])) {
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $rgpd = isset($_POST['rgpd']) ? true : false;
+
+    if ($email && $rgpd) {
+        // Vérifier si l'email n'existe pas déjà
+        $stmt = $pdo->prepare("SELECT COUNT(*) FROM newsletter_subscribers WHERE email = ?");
+        $stmt->execute([$email]);
+        $exists = $stmt->fetchColumn();
+
+        if (!$exists) {
+            // Insérer l'email dans la table
+            $stmt = $pdo->prepare("INSERT INTO newsletter_subscribers (email, date_subscribed) VALUES (?, NOW())");
+            $stmt->execute([$email]);
+            $message = "Merci pour votre inscription à la newsletter !";
+        } else {
+            $message = "Cet email est déjà inscrit.";
+        }
+    } else {
+        $message = "Veuillez entrer un email valide et accepter le RGPD.";
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -22,7 +53,7 @@ require_once("config/settings.php");
 </head>
 
 <body data-page="a-propos">
-        <div class="img-fond"></div>
+    <div class="img-fond"></div>
     <?php include ('templates/header.php'); ?>
     <main>
         <div class="ap-title">
@@ -64,14 +95,18 @@ require_once("config/settings.php");
                     </p>
                     <div class="newsletter-form">
                         <form action="" method="post" enctype="multipart/form-data">
+                            <?php if (isset($message)) : ?>
+                                <p class="newsletter-message"><?= htmlspecialchars($message) ?></p>
+                            <?php endif; ?>
+
                             <div class="form-group">
-                                <label for="name">E-mail :</label>
-                                <input type="text" name="nomcomplet" class="input-large" required>
+                                <label for="email">E-mail :</label>
+                                <input type="email" name="email" id="email" class="input-large" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="rgpd">
-                                    <input type="checkbox" id="rgpd" required>
+                                    <input type="checkbox" id="rgpd" name="rgpd" required>
                                     J'autorise le traitement de mes données pour recevoir des offres commerciales et des
                                     promotions.
                                 </label>
