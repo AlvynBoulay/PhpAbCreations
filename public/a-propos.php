@@ -1,7 +1,7 @@
 <?php 
-require_once("config/settings.php");
+require_once("../config/settings.php");
 
-// Connexion à la base de données (exemple PDO)
+// Connexion à la base de données
 try {
     $pdo = new PDO('mysql:host=localhost;dbname=abcreations', 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -42,8 +42,8 @@ if (isset($_POST['newsletter'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="AB Créations - Accueil" />
     <title>Espace membre - AB créations</title>
-    <link rel="shortcut icon" href="images/logoabcreation.png" />
-    <link rel="stylesheet" href="dist/css/theme.css" type="text/css">
+    <link rel="shortcut icon" href="assets/images/logoabcreation.png" />
+    <link rel="stylesheet" href="../dist/css/theme.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -151,7 +151,7 @@ if (isset($_POST['newsletter'])) {
     </main>
     <?php include ('templates/footer.php'); ?>
     <div class="layer"></div>
-    <script async src="dist/js/theme.js"></script>
+    <script async src="../dist/js/theme.js"></script>
     <script src="assets/scripts/btnRetourEnHaut.js"></script>
 </body>
 

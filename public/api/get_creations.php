@@ -1,5 +1,5 @@
 <?php
-require_once 'config/database.php';
+require_once '../../config/database.php';
 
 try {
     $stmt = $pdo->query("SELECT id, cover AS image, title AS alt, CONCAT('details-creation.php?id=', id) AS link FROM portfolio");

@@ -1,6 +1,6 @@
 <?php 
 
-require_once("config/settings.php"); 
+require_once("../config/settings.php"); 
 
 ?>
 <!DOCTYPE html>
@@ -104,8 +104,8 @@ require_once("config/settings.php");
 
     <div class="layer"></div>
     <script async src="<?php echo js_dir; ?>theme.js?<?php echo time(); ?>"></script>
-    <script src="../assets/scripts/btnRetourEnHaut.js?<?php echo time(); ?>"></script>
-    <script src="../assets/scripts/galeriedapercu.js?<?php echo time(); ?>"></script>
+    <script src="assets/scripts/btnRetourEnHaut.js?<?php echo time(); ?>"></script>
+    <script src="assets/scripts/galeriedapercu.js?<?php echo time(); ?>"></script>
 </body>
 
 </html>

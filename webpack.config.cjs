@@ -17,11 +17,11 @@ module.exports = {
   mode: isProduction ? 'production' : 'development',
 
   entry: {
-    theme: ['./assets/scripts/base.js', './assets/styles/base.scss'],
+    theme: ['public/assets/scripts/base.js', 'public/assets/styles/base.scss'],
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
+    path: path.resolve(__dirname, 'public/dist/js'),
     filename: '[name].js',
   },
 
@@ -134,7 +134,7 @@ module.exports = {
       ? [
           new BrowserSyncPlugin(
             {
-              proxy: 'http://localhost:8000', // Change ici si ton serveur PHP est différent
+              proxy: 'http://alvyn.local', 
               files: ['**/*.php'],
               injectChanges: true,
               open: false,

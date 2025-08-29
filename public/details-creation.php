@@ -1,5 +1,5 @@
 <?php 
-require_once("config/settings.php"); 
+require_once("../config/settings.php"); 
 
 // récupère l'id passée en paramètre
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
@@ -91,8 +91,8 @@ $portfolio = $stmt->fetch();
 
     <div class="layer"></div>
     <script async src="<?php echo js_dir; ?>theme.js?<?php echo time(); ?>"></script>
-    <script src="../assets/scripts/btnRetourEnHaut.js?<?php echo time(); ?>"></script>
-    <script src="../assets/scripts/galeriedapercu.js?<?php echo time(); ?>"></script>
+    <script src="assets/scripts/btnRetourEnHaut.js?<?php echo time(); ?>"></script>
+    <script src="assets/scripts/galeriedapercu.js?<?php echo time(); ?>"></script>
 </body>
 
 </html>

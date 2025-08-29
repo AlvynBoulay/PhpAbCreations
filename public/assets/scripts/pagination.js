@@ -77,7 +77,7 @@ function goToPage(page) {
 }
 
 // Charge les données puis lance l’affichage
-fetch('get_creations.php')
+fetch('api/get_creations.php')
   .then(response => {
     console.log('Fetch response:', response);
     return response.json();

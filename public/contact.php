@@ -1,6 +1,6 @@
 <?php 
 
-require_once("config/settings.php");
+require_once("../config/settings.php");
 
 // Connexion à la base de données
 try {
@@ -65,8 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="AB Créations - Accueil" />
     <title>Contact - AB créations</title>
-    <link rel="shortcut icon" href="images/logoabcreation.png" />
-    <link rel="stylesheet" href="dist/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../images/logoabcreation.png" />
+    <link rel="stylesheet" href="../dist/css/theme.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
     <div class="layer"></div>
 
     <script src="assets/scripts/components/toast.js"></script>  
-    <script async src="dist/js/theme.js"></script>
+    <script async src="../dist/js/theme.js"></script>
 </body>
 
 </html>

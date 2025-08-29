@@ -6,10 +6,10 @@
  * Utilise PHPMailer et Dotenv pour gérer l'envoi et la config.
  */
 
-require '../libs/PHPMailer-master/src/Exception.php';
-require '../libs/PHPMailer-master/src/PHPMailer.php';
-require '../libs/PHPMailer-master/src/SMTP.php';
-require __DIR__ . '/../vendor/autoload.php'; // chargement composer & dotenv
+require '../../libs/PHPMailer-master/src/Exception.php';
+require '../../libs/PHPMailer-master/src/PHPMailer.php';
+require '../../libs/PHPMailer-master/src/SMTP.php';
+require __DIR__ . '/../../vendor/autoload.php'; // chargement composer & dotenv
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -60,7 +60,7 @@ if (!$creation) {
 
 $subject = "Nouvelle creation sur AB Creations !";
 
-$imageDir = __DIR__ . '/../assets/images/cover/';
+$imageDir = __DIR__ . '/../../public/assets/images/cover/';
 
 foreach ($emails as $email) {
     $titre = htmlspecialchars($creation['title']);

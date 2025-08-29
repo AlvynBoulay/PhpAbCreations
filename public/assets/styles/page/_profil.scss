@@ -6,7 +6,7 @@
   min-height: 80vh;
 
   .profile-card {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 1.5rem;
     padding: 2rem;
     width: 100%;
@@ -60,10 +60,12 @@
       }
     }
 
+    // FORMULAIRE caché par défaut
     .profile-form {
-      display: flex;
+      display: none;  // caché au départ
       flex-direction: column;
       text-align: left;
+      margin-top: 1.5rem;
 
       label {
         font-size: 0.85rem;
@@ -91,6 +93,7 @@
       cursor: pointer;
       width: 100%;
       transition: background 0.2s ease;
+      text-align: center;
 
       &.logout {
         background: #222;
@@ -106,9 +109,25 @@
         }
       }
     }
+
+    // Quand on ajoute la classe "editing", on affiche le formulaire et on masque l'affichage simple
+    &.editing {
+      .profile-form {
+        display: flex;
+      }
+
+      // on peut cacher les <p> et la .name pour pas dupliquer l’info
+      p,
+      .name {
+        display: none;
+      }
+
+      .edit-profile {
+        display: none; // cacher bouton modifier une fois en mode édition
+      }
+    }
   }
 
-  // VERSION DESKTOP
   @media (min-width: 768px) {
     .profile-card {
       max-width: 900px;
@@ -150,17 +169,13 @@
           margin: 0.3rem 0;
           color: #555;
         }
-
-        .edit-profile {
-          margin-top: 2rem;
-        }
       }
 
       .profile-right {
         padding-left: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         .profile-form {
           label {
@@ -184,4 +199,16 @@
       }
     }
   }
+}
+
+.profile-form {
+  display: none;
+}
+
+.profile-card.editing .profile-form {
+  display: block;
+}
+
+.profile-card.editing .profile-info {
+  display: none;
 }

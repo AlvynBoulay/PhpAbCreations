@@ -1,6 +1,6 @@
 <?php 
 
-require_once("config/settings.php"); 
+require_once("../config/settings.php"); 
 
 ?>
 <!DOCTYPE html>
@@ -11,8 +11,8 @@ require_once("config/settings.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="AB Créations - Accueil" />
     <title>Espace membre - AB créations</title>
-    <link rel="shortcut icon" href="images/logoabcreation.png" />
-    <link rel="stylesheet" href="dist/css/theme.css" type="text/css">
+    <link rel="shortcut icon" href="../images/logoabcreation.png" />
+    <link rel="stylesheet" href="../dist/css/theme.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,7 +25,7 @@ require_once("config/settings.php");
         <div class="img-fond"></div>
         <?php include ('templates/header.php'); ?>
         <main class="form-container">
-            <form class="signup-form">
+            <form class="signup-form" action="auth/register.php" method="POST">
                 <h1>Création d’un compte</h1>
 
                 <label for="email">Email :</label>
@@ -63,7 +63,7 @@ require_once("config/settings.php");
         </main>
         <?php include ('templates/footer.php'); ?>
     <div class="layer"></div>
-    <script async src="dist/js/theme.js"></script>
+    <script async src="../dist/js/theme.js"></script>
     <script src="assets/scripts/btnRetourEnHaut.js"></script>
 </body>
 
